@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pomodoro</title>
+        <link rel="icon" href="icon.png">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Pomodoro.css">
+        <script src="Pomodoro.js"></script>
+    </head>
+    <body onload="loadPage()">
+        <main id="Main">
+            <nav>
+                Pomodoro
+            </nav>
+            <div id="Pomodoro">
+                <div id="Clock-Nav">
+                    <button class="Clock-Nav" id="Nav-Work" onclick="switchClock('Work')">Work</button>
+                    <button class="Clock-Nav" id="Nav-Short" onclick="switchClock('Short')">Short Break</button>
+                    <button class="Clock-Nav" id="Nav-Long" onclick="switchClock('Long')">Long Break</button>
+                </div>
+
+                <div class="Clock" id="Work">
+                    50:000
+                </div>
+                <div class="Clock" id="Short" style="display:none">
+                    05:000
+                </div>
+                <div class="Clock" id="Long" style="display:none">
+                    10:000
+                </div>
+
+                <div id="Clock-Control">
+                    <button class="Clock-Control" id="Start" onclick="startClock()">START</button>
+                    <button class="Clock-Control" id="Pause" onclick="pauseClock()" style="display: none;">PAUSE</button>
+                    <button class="Clock-Control" id="End" onclick="endClock()" style="display: none;">END</button>
+                    <audio id="audio" src="Mouse-Click.mp3" style="display:none"></audio>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+
+
